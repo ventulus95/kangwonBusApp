@@ -1,0 +1,23 @@
+.detailRoot{
+    height: 100%;
+}
+.detailTop{
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 300px;
+    display: flex;
+}
+.detailTitle{
+    margin-left: auto;
+    margin-right: auto;
+    color: gray;
+    font-weight: bold;
+    font-size: large;
+    line-height: 50px;
+}
+.back{
+    margin: 5px;
+    width: 30px;
+    cursor: pointer;
+}

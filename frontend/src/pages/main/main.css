@@ -1,0 +1,9 @@
+.mainTitle{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: gray;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 50px;
+}
