@@ -32,7 +32,6 @@ build/
 
 
 package-lock.json
-src/main/resources/static/dist
 node_modules/
 
 src/main/resources/application.yml
