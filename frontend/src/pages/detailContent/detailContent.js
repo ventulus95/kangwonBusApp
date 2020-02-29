@@ -11,6 +11,7 @@ const DetailContent = (props) => {
     const setTime = (flag, location) => {
         let url = '/busStop/' + flag + ' 방향 '+ location
         let setFunc = flag === '남춘천역' ? setSArr : setNArr;
+        console.log(url)
         axios.get(url,).then(res => {
             if(res.data.arrtime){
                 setFunc(res.data.arrtime+ '분 남음');
