@@ -14,20 +14,20 @@ import java.util.HashMap;
 @RestController
 public class RestapiController {
 
-    final RestTemplate restTemplate;
-    final BusArriveTime service;
-    final HashMap<String, BusStopDto> transStopToNode;
+    private RestTemplate webRestTemplate;
+    private BusArriveTime service;
+    private HashMap<String, BusStopDto> busStopToNodeid;
 
     public RestapiController(RestTemplate restTemplate, BusArriveTime service, HashMap<String, BusStopDto> transStopToNode) {
-        this.restTemplate = restTemplate;
+        this.webRestTemplate = restTemplate;
         this.service = service;
-        this.transStopToNode = transStopToNode;
+        this.busStopToNodeid = transStopToNode;
     }
 
     @GetMapping(value = "/busStop/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public BusStopDto busArrrivalTime(@PathVariable String id) throws URISyntaxException {
-        String nodeId = transStopToNode.get(id).getNodeid();
-        BusStopDto busTime = service.arrivedTime(nodeId, restTemplate);
+        String nodeId = busStopToNodeid.get(id).getNodeid();
+        BusStopDto busTime = service.arrivedTime(nodeId, webRestTemplate);
         return busTime;
 
     }
