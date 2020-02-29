@@ -4,6 +4,7 @@ import com.ventulus95.reactspringboot.DTO.BusStopDto;
 import com.ventulus95.reactspringboot.DTO.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,6 +21,9 @@ public class ApplicationTests {
 
 	@Value("${data.ServiceKey}")
 	private String key;
+
+	@Autowired
+	HashMap<String, BusStopDto> checker;
 
 	@Test
 	public void contextLoads() {
@@ -50,4 +54,5 @@ public class ApplicationTests {
 		}
 		System.out.println(transLater.get("춘천역 방향 강원대중앙도서관").getNodeid());
 	}
+
 }
