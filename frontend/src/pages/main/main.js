@@ -14,7 +14,7 @@ const Main = () => {
             <div className='mainTitle'>
                 강원대학교 300번 버스 알림이
             </div>
-            <div>
+            <div className='mainContent'>
                 {
                     cardList.map((card, i) => {
                         return(<Card title={card} key = {i}></Card>)
