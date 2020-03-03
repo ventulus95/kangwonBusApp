@@ -6,6 +6,9 @@
     margin-right: auto;
     margin-bottom: 20px;
     box-shadow: 0px 0px 3px 3px #bfcfde;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .detailTitle{
@@ -19,5 +22,6 @@
 .back{
     margin: 5px;
     width: 30px;
+    height: 40px;
     cursor: pointer;
 }

@@ -6,6 +6,9 @@
     margin-top: 15px;
     margin-bottom: 10px;
     background-color: #ffffff;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 10px 0px 0 0;
     box-shadow: 0px 0px 7px 3px #bfcfde;
@@ -13,7 +16,7 @@
     height: fit-content;
 }
 .busImg{
-    width: 100px;
+    height: 100px;
     margin: 10px;
 }
 .cardTop{
